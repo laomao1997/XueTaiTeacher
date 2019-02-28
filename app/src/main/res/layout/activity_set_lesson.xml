@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <!-- 顶部导航 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/iv_back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/ic_left_arrow_black" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="设置课程"
+            android:textColor="#303030"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dcdcdc" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 昵称 -->
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/tv_nick_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="17dp"
+                android:background="?android:attr/selectableItemBackground"
+                app:sDividerLineType="none"
+                app:sLeftTextColor="#303030"
+                app:sLeftTextSize="16dp"
+                app:sLeftTextString="昵称"
+                app:sLeftViewMarginLeft="15dp"
+                app:sRightTextColor="#000000"
+                app:sRightTextSize="14dp"
+                app:sRightTextString="起风了"
+                app:sRightViewMarginRight="15dp" />
+
+            <!--电话-->
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/tv_phone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?android:attr/selectableItemBackground"
+                app:sDividerLineType="none"
+                app:sLeftTextColor="#303030"
+                app:sLeftTextSize="16dp"
+                app:sLeftTextString="电话"
+                app:sLeftViewMarginLeft="15dp"
+                app:sRightTextColor="#000000"
+                app:sRightTextSize="14dp"
+                app:sRightTextString="13378964444"
+                app:sRightViewMarginRight="15dp" />
+
+            <!--学校-->
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/tv_school"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?android:attr/selectableItemBackground"
+                app:sDividerLineType="none"
+                app:sLeftTextColor="#303030"
+                app:sLeftTextSize="16dp"
+                app:sLeftTextString="学校"
+                app:sLeftViewMarginLeft="15dp"
+                app:sRightTextColor="#000000"
+                app:sRightTextSize="14dp"
+                app:sRightTextString="城西中学"
+                app:sRightViewMarginRight="15dp" />
+
+            <!-- 年级 -->
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/tv_grade"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?android:attr/selectableItemBackground"
+                app:sDividerLineType="none"
+                app:sLeftTextColor="#303030"
+                app:sLeftTextSize="16dp"
+                app:sLeftTextString="年级"
+                app:sLeftViewMarginLeft="15dp"
+                app:sRightTextColor="#000000"
+                app:sRightTextSize="14dp"
+                app:sRightTextString="初中三年级"
+                app:sRightViewMarginRight="15dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="17dp"
+                android:background="#dcdcdc" />
+
+            <!-- 上课时间 -->
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?android:attr/selectableItemBackground"
+                app:sDividerLineType="none"
+                app:sLeftTextColor="#303030"
+                app:sLeftTextSize="16dp"
+                app:sLeftTextString="上课时间"
+                app:sLeftViewMarginLeft="15dp"
+                app:sRightTextColor="#000000"
+                app:sRightTextSize="14dp"
+                app:sRightTextString="明天11:00-11:55"
+                app:sRightViewMarginRight="15dp" />
+
+            <!-- 消息 -->
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/tv_message"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?android:attr/selectableItemBackground"
+                app:sDividerLineType="none"
+                app:sLeftTextColor="#303030"
+                app:sLeftTextSize="16dp"
+                app:sLeftTextString="消息"
+                app:sLeftViewMarginLeft="15dp"
+                app:sRightIconHeight="16dp"
+                app:sRightIconMarginRight="15dp"
+                app:sRightIconRes="@drawable/svg_right_arrow_blue"
+                app:sRightIconWidth="12dp"
+                app:sRightTextColor="#0099FF"
+                app:sRightTextSize="14dp"
+                app:sRightTextString="查看/发消息" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="17dp"
+                android:background="#dcdcdc" />
+
+            <!-- 辅导内容 -->
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/tv_coach"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?android:attr/selectableItemBackground"
+                app:sDividerLineType="none"
+                app:sLeftTextColor="#303030"
+                app:sLeftTextSize="16dp"
+                app:sLeftTextString="辅导内容"
+                app:sLeftViewMarginLeft="15dp"
+                app:sRightIconHeight="16dp"
+                app:sRightIconMarginRight="15dp"
+                app:sRightIconRes="@drawable/svg_right_arrow_blue"
+                app:sRightIconWidth="12dp"
+                app:sRightTextColor="#0099FF"
+                app:sRightTextSize="14dp"
+                app:sRightTextString="请设置" />
+
+            <!-- 备课 -->
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/tv_courseware"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:sDividerLineType="none"
+                app:sLeftTextColor="#303030"
+                app:sLeftTextSize="16dp"
+                app:sLeftTextString="备课"
+                app:sLeftViewMarginLeft="15dp"
+                app:sRightTextColor="#AAAAAA"
+                app:sRightTextSize="14dp"
+                app:sRightTextString="请去pc教师端备课"
+                app:sRightViewMarginRight="15dp" />
+
+            <!-- 上课 -->
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/tv_courseStatus"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:sDividerLineType="none"
+                app:sLeftTextColor="#303030"
+                app:sLeftTextSize="16dp"
+                app:sLeftTextString="上课"
+                app:sLeftViewMarginLeft="15dp"
+                app:sRightTextColor="#AAAAAA"
+                app:sRightTextSize="14dp"
+                app:sRightTextString="请去pc教师端开始上课"
+                app:sRightViewMarginRight="15dp" />
+
+            <!-- 学生评价 -->
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/tv_comment"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?android:attr/selectableItemBackground"
+                app:sDividerLineType="none"
+                app:sLeftTextColor="#303030"
+                app:sLeftTextSize="16dp"
+                app:sLeftTextString="学生评价"
+                app:sLeftViewMarginLeft="15dp"
+                app:sRightTextColor="#AAAAAA"
+                app:sRightTextSize="14dp"
+                app:sRightTextString="尚未评价"
+                app:sRightViewMarginRight="15dp" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/ly_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/ly_bg_gray_white"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_good_comment"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_studnet_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:includeFontPadding="false"
+                    android:text="昵称"
+                    android:textColor="#606060"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toRightOf="@+id/iv_avatar"
+                    app:layout_constraintTop_toTopOf="@+id/iv_avatar" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:includeFontPadding="false"
+                    android:text="2018-12-31"
+                    android:textColor="#999999"
+                    android:textSize="11sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_avatar" />
+
+                <TextView
+                    android:id="@+id/tv_evaluation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:includeFontPadding="false"
+                    android:text="我是老师给的评价"
+                    android:textColor="#303030"
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+                <LinearLayout
+                    android:id="@+id/ly_reply"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="#F2F8FF"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_evaluation">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="10dp"
+                        android:text="回复："
+                        android:textColor="#0099FF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_reply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="我是老师给学生的回复"
+                        android:textColor="#303030"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_btn_reply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:includeFontPadding="false"
+                    android:text="回复"
+                    android:textColor="#0099FF"
+                    android:textSize="14sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_evaluation" />
+
+                <ImageView
+                    android:id="@+id/iv_btn_reply"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="7dp"
+                    android:src="@drawable/ic_reply"
+                    app:layout_constraintRight_toLeftOf="@+id/tv_btn_reply"
+                    app:layout_constraintTop_toTopOf="@+id/tv_btn_reply" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

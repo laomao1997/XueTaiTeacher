@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".ui.activities.StartActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_marginTop="130dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/logo_teacher"/>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/btn_bg_blue"
+            android:textColor="@color/colorWhite"
+            android:stateListAnimator="@null"
+            android:text="登陆"/>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/colorBlue"
+            android:background="@drawable/btn_bg_white"
+            android:stateListAnimator="@null"
+            android:text="注册"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

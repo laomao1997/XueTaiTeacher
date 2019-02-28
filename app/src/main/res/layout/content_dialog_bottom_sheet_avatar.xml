@@ -1,0 +1,54 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_bottom_sheet_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:text="添加头像"
+        android:textColor="#aaaaaa"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_btn_add_photo_camera"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@android:color/white"
+        android:drawablePadding="32dp"
+        android:drawableStart="@drawable/ic_take_a_photo"
+        android:drawableTint="#303030"
+        android:gravity="start|center_vertical"
+        android:text="拍照"
+        android:textColor="#303030"
+        android:textSize="16sp"
+        android:drawableLeft="@drawable/ic_take_a_photo" />
+
+    <TextView
+        android:id="@+id/tv_btn_add_photo_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@android:color/white"
+        android:drawablePadding="32dp"
+        android:drawableStart="@drawable/ic_choose_from_gallary"
+        android:drawableTint="#303030"
+        android:gravity="start|center_vertical"
+        android:text="相册"
+        android:textColor="#303030"
+        android:textSize="16sp"
+        android:drawableLeft="@drawable/ic_choose_from_gallary" />
+
+
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xuetai.teacher.xuetaiteacher">
+
+    <!--允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--获取GSM（2g）、WCDMA（联通3g）等网络状态的信息  -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--获取sd卡读的权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--获取sd卡写的权限，用于文件上传和下载-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许读取手机状态 用于创建BmobInstallation-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--允许使用相机-->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activities.StartActivity" />
+        <activity android:name=".ui.activities.LoginActivity" />
+        <activity android:name=".ui.activities.RegisterActivity" />
+        <activity android:name=".ui.activities.ModifyPasswordActivity" />
+        <activity android:name=".ui.activities.PersonalActivity" />
+        <activity android:name=".ui.activities.EducationInfoActivity" />
+        <activity android:name=".ui.activities.DiplomaIndentifyActivity" />
+        <activity android:name=".ui.activities.ReviewStatusActivity" />
+
+        <activity android:name=".ui.activities.my.MyPersonalInfoActivity" />
+        <activity android:name=".ui.activities.my.personalInfo.MyBasicInfoActivity" />
+        <activity android:name=".ui.activities.my.personalInfo.MyEducationInfoActivity" />
+        <activity android:name=".ui.activities.my.personalInfo.MyDiplomaIdentification" />
+        <activity android:name=".ui.activities.my.personalInfo.MyTeachingExperiencesActivity" />
+        <activity android:name=".ui.activities.my.personalInfo.MyHonorActivity" />
+        <activity android:name=".ui.activities.my.personalInfo.MyWriteHonorActivity" />
+        <activity android:name=".ui.activities.my.personalInfo.MyTeachingDemonstration" />
+
+        <activity android:name=".ui.activities.my.MyIncomeActivity" />
+        <activity android:name=".ui.activities.my.income.WithdrawActivity" />
+
+        <activity android:name=".ui.activities.my.BasicSettingActivity" />
+
+        <activity android:name=".ui.activities.ScheduleActivity" />
+        <activity
+            android:name=".ui.activities.SetLessonActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".ui.activities.CourseSettingActivity" />
+        <activity android:name=".ui.activities.course.SetTutorialContentActivity" />
+        <activity android:name=".ui.activities.course.SetTutorialTriMultiListActivity" />
+        <activity
+            android:name=".ui.activities.my.MyEvaluationActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity android:name=".ui.activities.course.SetGradeActivity" />
+        <activity android:name=".ui.activities.course.ViewSelectedTutorilActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.xuetai.teacher.xuetaiteacher.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_public" />
+        </provider>
+
+
+    </application>
+
+
+</manifest>

@@ -1,0 +1,1985 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorBlue">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="1月"
+                android:textColor="@color/colorWhite"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ly_w0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/schdu_bg_blue_no_stroke">
+
+            <TextView
+                android:id="@+id/tv_week1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="一"
+                android:textColor="@color/colorWhite" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/ic_white_circle" />
+
+            <TextView
+                android:id="@+id/tv_day1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="36dp"
+                android:gravity="center"
+                android:text="11"
+                android:textColor="@color/colorBlue"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ly_w1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/schdu_bg_blue_no_stroke">
+
+            <TextView
+                android:id="@+id/tv_week2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="二"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/tv_day2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="36dp"
+                android:text="12"
+                android:textColor="@color/colorWhite"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ly_w2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/schdu_bg_blue_no_stroke">
+
+            <TextView
+                android:id="@+id/tv_week3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="三"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/tv_day3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="36dp"
+                android:text="13"
+                android:textColor="@color/colorWhite"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ly_w3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/schdu_bg_blue_no_stroke">
+
+            <TextView
+                android:id="@+id/tv_week4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="四"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/tv_day4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="36dp"
+                android:text="14"
+                android:textColor="@color/colorWhite"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ly_w4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/schdu_bg_blue_no_stroke">
+
+            <TextView
+                android:id="@+id/tv_week5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="五"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/tv_day5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="36dp"
+                android:text="15"
+                android:textColor="@color/colorWhite"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ly_w5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/schdu_bg_blue_no_stroke">
+
+            <TextView
+                android:id="@+id/tv_week6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="六"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/tv_day6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="36dp"
+                android:text="16"
+                android:textColor="@color/colorWhite"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ly_w6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/schdu_bg_blue_no_stroke">
+
+            <TextView
+                android:id="@+id/tv_week7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="日"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/tv_day7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="36dp"
+                android:text="17"
+                android:textColor="@color/colorWhite"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--七点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/ly_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/schdu_bg_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="7:00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="至"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="7:55"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv71"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv72"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv73"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv74"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv75"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv76"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv77"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+            </LinearLayout>
+
+            <!--八点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/ly_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/schdu_bg_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="8:00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="至"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="8:55"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv81"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv82"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv83"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv84"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv85"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv86"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv87"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+            </LinearLayout>
+
+            <!--九点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/ly_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/schdu_bg_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="9:00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="至"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="9:55"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv91"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv92"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv93"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv94"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv95"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv96"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv97"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+            </LinearLayout>
+
+            <!--十点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/ly_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/schdu_bg_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="10:00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="至"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="10:55"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv101"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv102"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv103"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv104"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv105"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv106"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv107"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+            </LinearLayout>
+
+            <!--十一点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/ly_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/schdu_bg_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="11:00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="至"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="11:55"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv111"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv112"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv113"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv114"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv115"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv116"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv117"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+            </LinearLayout>
+
+            <!--十二点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/ly_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/schdu_bg_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="12:00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="至"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="12:55"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv121"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv122"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv123"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv124"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv125"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv126"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv127"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+            </LinearLayout>
+
+            <!--十三点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/ly_13"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/schdu_bg_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="13:00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="至"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="13:55"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv131"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv132"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv133"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv134"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv135"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv136"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv137"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+            </LinearLayout>
+
+            <!--十四点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/ly_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/schdu_bg_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="14:00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="至"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="14:55"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv141"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv142"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv143"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv144"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv145"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv146"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv147"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+            </LinearLayout>
+
+            <!--十五点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/ly_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/schdu_bg_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="15:00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="至"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="15:55"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv151"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv152"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv153"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv154"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv155"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv156"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv157"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+            </LinearLayout>
+
+            <!--十六点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/ly_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/schdu_bg_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="16:00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="至"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="16:55"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv161"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv162"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv163"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv164"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv165"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv166"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv167"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+            </LinearLayout>
+
+            <!--十七点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/ly_17"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/schdu_bg_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="17:00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="至"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="17:55"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv171"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv172"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv173"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv174"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv175"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv176"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv177"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+            </LinearLayout>
+
+            <!--十八点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/ly_18"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/schdu_bg_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="18:00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="至"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="18:55"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv181"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv182"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv183"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv184"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv185"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv186"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv187"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+            </LinearLayout>
+
+            <!--十九点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/ly_19"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/schdu_bg_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="19:00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="至"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="19:55"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv191"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv192"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv193"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv194"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv195"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv196"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv197"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+            </LinearLayout>
+
+            <!--二十点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/ly_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/schdu_bg_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="20:00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="至"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="20:55"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv201"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv202"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv203"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv204"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv205"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv206"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv207"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+            </LinearLayout>
+
+            <!--二十一点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/ly_21"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/schdu_bg_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="21:00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="至"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="21:55"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv211"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv212"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv213"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv214"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv215"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv216"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv217"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+            </LinearLayout>
+
+            <!--二十二点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/ly_22"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/schdu_bg_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="22:00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="至"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="22:55"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv221"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv222"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv223"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv224"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv225"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv226"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv227"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+            </LinearLayout>
+
+            <!--二十三点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/ly_23"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/schdu_bg_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="23:00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="至"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0078ff"
+                        android:textSize="12dp"
+                        android:text="23:55"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv231"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv232"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv233"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv234"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv235"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv236"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+                <TextView
+                    android:id="@+id/tv237"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:background="@drawable/schdu_bg_white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

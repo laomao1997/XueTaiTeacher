@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_good_comment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="19dp" />
+    
+    <TextView
+        android:id="@+id/tv_nick_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="昵称"
+        android:textSize="14sp"
+        android:textColor="#606060"
+        android:includeFontPadding="false"
+        app:layout_constraintTop_toTopOf="@+id/iv_avatar"
+        app:layout_constraintLeft_toRightOf="@+id/iv_avatar"
+        android:layout_marginLeft="7dp"/>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2018-12-31"
+        android:textSize="11sp"
+        android:textColor="#999999"
+        android:includeFontPadding="false"
+        app:layout_constraintTop_toBottomOf="@+id/iv_avatar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="9dp"/>
+
+    <TextView
+        android:id="@+id/tv_evaluation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我是老师给的评价"
+        android:textColor="#303030"
+        android:textSize="16sp"
+        android:includeFontPadding="false"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/tv_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="回复"
+        android:textSize="14sp"
+        android:textColor="#0099FF"
+        android:includeFontPadding="false"
+        app:layout_constraintTop_toBottomOf="@+id/tv_evaluation"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp" />
+
+    <ImageView
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/ic_reply"
+        app:layout_constraintTop_toTopOf="@+id/tv_reply"
+        app:layout_constraintRight_toLeftOf="@+id/tv_reply"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="7dp"/>
+
+    <View
+        android:id="@+id/v_divider"
+        app:layout_constraintTop_toBottomOf="@+id/tv_reply"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dcdcdc" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.xuexiangjys:XUI:1.0.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/XUI-1.0.0.aar/4323ed9b2f8d30dab2fd7938c48b4928/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/XUI-1.0.0.aar/4323ed9b2f8d30dab2fd7938c48b4928/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/XUI-1.0.0.aar/4323ed9b2f8d30dab2fd7938c48b4928/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.xuexiangjys/XUI/1.0.0/7251355c2ed84ad67ca217b164577d1aa4a6c83d/XUI-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

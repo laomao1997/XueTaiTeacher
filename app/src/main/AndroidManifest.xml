@@ -38,14 +38,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.StartActivity" />
-        <activity android:name=".ui.activities.LoginActivity" />
-        <activity android:name=".ui.activities.RegisterActivity" />
-        <activity android:name=".ui.activities.ModifyPasswordActivity" />
-        <activity android:name=".ui.activities.PersonalActivity" />
-        <activity android:name=".ui.activities.EducationInfoActivity" />
-        <activity android:name=".ui.activities.DiplomaIndentifyActivity" />
-        <activity android:name=".ui.activities.ReviewStatusActivity" />
+        <activity
+            android:name=".ui.activities.StartActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activities.LoginActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activities.RegisterActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activities.ModifyPasswordActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activities.PersonalActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activities.EducationInfoActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activities.DiplomaIndentifyActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activities.ReviewStatusActivity"
+            android:launchMode="singleTask" />
 
         <activity android:name=".ui.activities.my.MyPersonalInfoActivity" />
         <activity android:name=".ui.activities.my.personalInfo.MyBasicInfoActivity" />
@@ -65,14 +81,27 @@
         <activity
             android:name=".ui.activities.SetLessonActivity"
             android:launchMode="singleTask" />
-        <activity android:name=".ui.activities.CourseSettingActivity" />
-        <activity android:name=".ui.activities.course.SetTutorialContentActivity" />
-        <activity android:name=".ui.activities.course.SetTutorialTriMultiListActivity" />
+        <activity
+            android:name=".ui.activities.CourseSettingActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activities.course.SetTutorialContentActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activities.course.SetTutorialTriMultiListActivity"
+            android:launchMode="singleTask" />
         <activity
             android:name=".ui.activities.my.MyEvaluationActivity"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
-        <activity android:name=".ui.activities.course.SetGradeActivity" />
-        <activity android:name=".ui.activities.course.ViewSelectedTutorilActivity" />
+        <activity
+            android:name=".ui.activities.course.SetGradeActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activities.course.ViewSelectedTutorilActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".ui.activities.ChatActivity" />
+        <activity android:name=".ui.activities.my.AboutActivity" />
+        <activity android:name=".ui.activities.my.personalInfo.MyIntroductionActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"

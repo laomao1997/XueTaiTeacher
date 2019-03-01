@@ -2,4 +2,5 @@
     <string name="app_name">丁牛教师版</string>
     <string name="my_teaching_demo_text1">教学展示是一段视频，用于审核教授资格，也将出现在你的老师介绍中，向学生展示你的教学特点和风格。</string>
     <string name="my_teaching_demo_text2">你需要登陆PC教师端进行录制。</string>
+    <string name="hint_introduction">1.介绍自己的教学经历；\n2.写出教学风格、特点、得到的奖项或荣誉，突出自身教学优势；\n3.写出成功案例。</string>
 </resources>

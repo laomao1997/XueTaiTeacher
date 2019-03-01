@@ -196,7 +196,7 @@ public class SetLessonActivity extends AppCompatActivity {
             tvStuName.setText(nickname);
             tvDateComment.setText(commentTime);
             tvEvaluation.setText(comment);
-            if (!reply.isEmpty()) {
+            if (!(reply == null)) {
                 tvBtnReply.setVisibility(View.GONE);
                 ivBtnReply.setVisibility(View.GONE);
                 tvReply.setText(reply);

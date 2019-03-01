@@ -73,7 +73,7 @@ public class MyFragment extends Fragment {
             SharedPreferences userPreference = getActivity().getSharedPreferences("setting", 0);
             String userInfo = userPreference.getString("info", "no_info");
             JSONObject infoJson = new JSONObject(userInfo);
-            KLog.json(userInfo);
+//            KLog.json(userInfo);
             iconUrl = infoJson.getString("head_photo");
             realName = infoJson.getString("real_name");
             subject = infoJson.getString("subject");

@@ -4,17 +4,28 @@
     android:layout_height="wrap_content"
     android:background="?android:attr/selectableItemBackground"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/ic_noicon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/divider"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"/>
 
     <TextView
         android:id="@+id/tv_nick_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="我是学生的昵称"
-        android:textSize="15dp"
+        android:textSize="18dp"
         android:textColor="#303030"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="13dp" />
+        app:layout_constraintLeft_toRightOf="@+id/iv_avatar"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="10dp"/>
 
     <TextView
         android:id="@+id/tv_chat"
@@ -26,9 +37,9 @@
         android:ellipsize="end"
         android:lines="1"
         app:layout_constraintTop_toBottomOf="@+id/tv_nick_name"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_nick_name"
         app:layout_constraintRight_toLeftOf="@+id/tv_number"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="7dp"
         android:layout_marginRight="5dp"/>
 
     <TextView
@@ -36,9 +47,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="时间"
-        android:textSize="15dp"
+        android:textSize="13dp"
         android:textColor="#999999"
         app:layout_constraintTop_toTopOf="@id/tv_nick_name"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_nick_name"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginRight="15dp"/>
 
@@ -46,24 +58,28 @@
         android:id="@+id/tv_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="8"
-        android:textSize="12sp"
+        android:background="@drawable/simple_red_dot"
+        android:paddingLeft="4dp"
+        android:paddingTop="0dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="0dp"
+        android:text="0"
+        android:includeFontPadding="false"
         android:textColor="#FFFFFF"
+        android:textSize="12sp"
         app:layout_constraintTop_toTopOf="@id/tv_chat"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_chat"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="15dp"
-        android:paddingLeft="6.5dp"
-        android:paddingRight="6.5dp"
-        android:paddingTop="2dp"
-        android:paddingBottom="2dp"
-        android:background="@drawable/tv_bg_circle_blue"/>
+        android:layout_marginRight="15dp"/>
 
     <View
         android:id="@+id/divider"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="0.5dp"
         android:background="#dcdcdc"
         app:layout_constraintTop_toBottomOf="@+id/tv_chat"
-        android:layout_marginTop="13dp"/>
+        app:layout_constraintLeft_toLeftOf="@+id/tv_nick_name"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="1dp"/>
 
 </android.support.constraint.ConstraintLayout>

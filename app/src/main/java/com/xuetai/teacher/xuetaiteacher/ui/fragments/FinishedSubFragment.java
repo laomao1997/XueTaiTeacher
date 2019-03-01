@@ -92,7 +92,7 @@ public class FinishedSubFragment extends Fragment {
             public void onNext(ResponseBody responseBody) {
                 try {
                     String courseResult = responseBody.string();
-                    KLog.json("课程结果", courseResult);
+//                    KLog.json("课程结果", courseResult);
                     JSONObject courseresultJson = new JSONObject(courseResult);
                     JSONArray courseJsonArray = courseresultJson.getJSONArray("result");
                     for (int i = 0; i < courseJsonArray.length(); i++) {

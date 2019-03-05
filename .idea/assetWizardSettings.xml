@@ -14,10 +14,11 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="svg_right_arrow_blue" />
+                            <entry key="height" value="56" />
+                            <entry key="outputName" value="ic_send_image" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="C:\Users\Dingniu017\Desktop\待上的课单个课程的箭头.svg" />
-                            <entry key="width" value="12" />
+                            <entry key="sourceFile" value="C:\Users\Dingniu017\Desktop\图片.svg" />
+                            <entry key="width" value="64" />
                           </map>
                         </option>
                       </PersistentState>

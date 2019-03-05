@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +22,7 @@ import com.xuetai.teacher.xuetaiteacher.adapters.MessageAdapter;
 import com.xuetai.teacher.xuetaiteacher.api.NormalApi;
 import com.xuetai.teacher.xuetaiteacher.constant.MethodCode;
 import com.xuetai.teacher.xuetaiteacher.ui.activities.ChatActivity;
+import com.xuetai.teacher.xuetaiteacher.ui.activities.MainActivity;
 import com.xuetai.teacher.xuetaiteacher.ui.activities.PersonalActivity;
 import com.xuetai.teacher.xuetaiteacher.utils.SharedPreferencesHelper;
 
@@ -41,11 +44,13 @@ import rx.Subscriber;
 public class MessageFragment extends Fragment {
 
     @BindView(R.id.listview)
-    ListView listView;
+    RecyclerView listView;
 
     MessageAdapter messageAdapter;
 
     String messageJsonArgs = "";
+
+    int unreadTotal = 0;
 
     private List<Map<String, Object>> data = new ArrayList<>();
 
@@ -69,85 +74,65 @@ public class MessageFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_message, null);
 
         ButterKnife.bind(this, v);
-
+        initView();
 
         return v;
     }
 
-
-
     private void loadDialogues() {
-        data.clear();
-        SharedPreferencesHelper sharedPreferencesHelper = new SharedPreferencesHelper(getContext(), "setting");
-        messageJsonArgs = sharedPreferencesHelper.getSharedPreference("MESSAGES", "NO").toString();
-        try {
-            JSONArray jsonArray = JSON.parseObject(messageJsonArgs).getJSONArray("result");
-//                    KLog.json(jsonArray.toJSONString());
-            for (int i = 0; i < jsonArray.size(); i++) {
-                com.alibaba.fastjson.JSONObject jsonObject = jsonArray.getJSONObject(i);
-                Map<String, Object> item = new HashMap<String, Object>();
-                item.put("studentId", jsonObject.getInteger("studentId"));
-                item.put("studentName", jsonObject.getString("studentName"));
-                item.put("lastMessage", jsonObject.getString("lastMessage"));
-                item.put("updatedTime", jsonObject.getString("updatedTime"));
-                item.put("headPhoto", jsonObject.getString("headPhoto"));
-                item.put("unread", jsonObject.getString("unread"));
-                data.add(item);
+        ((MainActivity) getActivity()).SetOnMessageUpdateListener(new MainActivity.OnMessageUpdateListener() {
+            @Override
+            public void onMessageUpdate(String message) {
+                data.clear();
+                try {
+                    JSONArray jsonArray = JSON.parseObject(message).getJSONArray("result");
+                    KLog.json(jsonArray.toJSONString());
+
+                    for (int i = 0; i < jsonArray.size(); i++) {
+                        com.alibaba.fastjson.JSONObject jsonObject = jsonArray.getJSONObject(i);
+                        Map<String, Object> item = new HashMap<String, Object>();
+                        item.put("studentId", jsonObject.getInteger("studentId"));
+                        item.put("studentName", jsonObject.getString("studentName"));
+                        item.put("lastMessage", jsonObject.getString("lastMessage"));
+                        item.put("updatedTime", jsonObject.getString("updatedTime"));
+                        item.put("headPhoto", jsonObject.getString("headPhoto"));
+                        item.put("unread", jsonObject.getString("unread"));
+                        data.add(item);
+                    }
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
+                finally {
+                    int number = 0;
+                    for (int i = 0; i < data.size(); i++) {
+                        number += Integer.parseInt((String) data.get(i).get("unread"));
+                    }
+                    KLog.a(number);
+                    messageAdapter.notifyDataSetChanged();
+                }
             }
-        } catch (Exception e) {
-            KLog.e(e);
-        }
-        initView();
+        });
     }
 
     private void initView() {
-        messageAdapter = new MessageAdapter(getContext(), R.layout.list_item_message, data);
+        messageAdapter = new MessageAdapter(getActivity(), data);
+        listView.setLayoutManager(new LinearLayoutManager(getContext()));
         listView.setAdapter(messageAdapter);
         messageAdapter.notifyDataSetChanged();
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        messageAdapter.setOnImageClickListener(new MessageAdapter.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void OnImageClick(int position) {
                 getChatDetail(position);
             }
         });
     }
 
     private void getChatDetail(int position) {
-        JSONObject jsonObject = new JSONObject();
-        try {
-            jsonObject.put("studentId", data.get(position).get("studentId"));
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        NormalApi.getInstance().getResult(MethodCode.GetChartDetaile, jsonObject, new Subscriber<ResponseBody>() {
-            @Override
-            public void onCompleted() {
-
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onNext(ResponseBody responseBody) {
-                try {
-                    KLog.json(responseBody.string());
-                    removeUnread(position);
-//                    System.out.println("点击了" + data.get(position).get("studentName"));
-                    Intent intent = new Intent(getContext(), ChatActivity.class);
-                    startActivity(intent);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
-
-    private void removeUnread(int position) {
-        data.get(position).put("unread", "0");
-        messageAdapter.notifyDataSetChanged();
+        Intent intent = new Intent(getContext(), ChatActivity.class);
+        intent.putExtra("STUDENT_ID", (int) data.get(position).get("studentId"));
+        intent.putExtra("STUDENT_AVATAR", (String) data.get(position).get("headPhoto"));
+        startActivity(intent);
     }
 
 }

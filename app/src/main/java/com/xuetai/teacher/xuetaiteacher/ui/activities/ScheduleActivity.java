@@ -209,6 +209,9 @@ public class ScheduleActivity extends AppCompatActivity {
                 break;
             case R.id.tv_bottom:
                 copyScheduleToNextPage(viewPager.getCurrentItem());
+                if (viewPager.getCurrentItem() != 18) {
+                    viewPager.setCurrentItem(viewPager.getCurrentItem()+1);
+                }
                 break;
         }
     }

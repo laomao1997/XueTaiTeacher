@@ -3,11 +3,17 @@ package com.xuetai.teacher.xuetaiteacher.ui.activities.my.personalInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.socks.library.KLog;
 import com.xuetai.teacher.xuetaiteacher.R;
+import com.xuetai.teacher.xuetaiteacher.utils.SharedPreferencesHelper;
 import com.xuetai.teacher.xuetaiteacher.utils.StatusBarUtil;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,6 +26,13 @@ public class MyIntroductionActivity extends AppCompatActivity {
     TextView tvNumber;
     @BindView(R.id.edit_text)
     EditText editText;
+    @BindView(R.id.tv_submit)
+    TextView tvSubmit;
+
+    SharedPreferencesHelper sharedPreferencesHelper;
+    String info;
+    String note;
+    JSONObject jsonObject;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,16 +53,36 @@ public class MyIntroductionActivity extends AppCompatActivity {
         }
 
         ButterKnife.bind(this);
+
+        sharedPreferencesHelper = new SharedPreferencesHelper(this, "setting");
+        info = sharedPreferencesHelper.getSharedPreference("info", "no_info").toString();
+        try {
+            jsonObject = new JSONObject(info);
+            note = jsonObject.getString("note");
+        } catch (Exception e) {
+            e.printStackTrace();
+            note = "";
+        }
+        editText.setText(note);
     }
 
     @OnTextChanged(R.id.edit_text)
     void doOnTextChanged() {
-        tvNumber.setText("" + editText.getText().length() + "/1000");
+        note = editText.getText().toString();
+        tvNumber.setText("" + note.length() + "/1000");
     }
 
-    @OnClick(R.id.iv_back_arrow)
-    void doBack() {
-        finish();
+
+    @OnClick({R.id.iv_back_arrow, R.id.tv_submit})
+    void doBack(View view) {
+        switch (view.getId()) {
+            case R.id.tv_submit:
+                System.out.println("note!!!!!!!");
+                break;
+            case R.id.iv_back_arrow:
+                finish();
+                break;
+        }
     }
 
 }

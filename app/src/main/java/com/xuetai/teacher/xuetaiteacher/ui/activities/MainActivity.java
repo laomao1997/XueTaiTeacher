@@ -6,21 +6,15 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.app.FragmentTabHost;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TabHost;
 import android.widget.TextView;
 
 
@@ -44,9 +38,7 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.CommonNavigat
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.CommonNavigatorAdapter;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerIndicator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerTitleView;
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.ClipPagerTitleView;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.CommonPagerTitleView;
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.SimplePagerTitleView;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.badge.BadgeAnchor;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.badge.BadgePagerTitleView;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.badge.BadgeRule;
@@ -54,23 +46,24 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.badge.
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import okhttp3.ResponseBody;
+import rx.Observable;
 import rx.Subscriber;
+import rx.Subscription;
 
 public class MainActivity extends AppCompatActivity {
-
-
-    private Class<?> mFragmentArray[] = {TimetableFragment.class, MessageFragment.class, MyFragment.class};
 
     private List<Fragment> mFragments = new ArrayList<>();
 
     String messageJsonArgs = "";
+
+    TextView badgeTextView;
+
+    Subscription mSubscription;
 
 
     private int[] mImageViewArray = {R.drawable.selector_tab_timetable,
@@ -105,13 +98,36 @@ public class MainActivity extends AppCompatActivity {
 
         checkLogin();
         initNovaTabView();
-//        loadDialogues();
+        loadDialogusForFirstTime();
+    }
+
+    /**
+     * 向服务端每五秒轮询一次消息列表
+     */
+    private void requestDialogs() {
+        mSubscription = Observable.interval(5, 5, TimeUnit.SECONDS)
+                .subscribe(new Subscriber<Long>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onNext(Long aLong) {
+                        loadDialogues();
+                    }
+                });
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        loadDialogues();
+        requestDialogs();
     }
 
     @Override
@@ -148,16 +164,19 @@ public class MainActivity extends AppCompatActivity {
      * 设置带小红点的选项卡界面
      */
     private void initNovaTabView() {
+        badgeTextView = (TextView) LayoutInflater.from(this).inflate(R.layout.simple_red_dot_badge_layout, null);
+
         mFragments.add(new TimetableFragment());
-        mFragments.add(new MessageFragment());
+        MessageFragment messageFragment = new MessageFragment();
+        mFragments.add(messageFragment);
         mFragments.add(new MyFragment());
         pager = findViewById(R.id.view_pager);
         pager.setAdapter(new TestAdapter(getSupportFragmentManager(), mFragments));
-        magicIndicator = (MagicIndicator) findViewById(R.id.magic_indicator);
+        magicIndicator = findViewById(R.id.magic_indicator);
         commonNavigator = new CommonNavigator(this);
     }
 
-    private void refreshNovaTabView() {
+    private void setNovaTabView() {
         // 设置底部导航调整宽度和间距实现均分
         commonNavigator.setAdjustMode(true);
         commonNavigator.setAdapter(new CommonNavigatorAdapter() {
@@ -211,17 +230,15 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         pager.setCurrentItem(i);
-//                        badgePagerTitleView.setBadgeView(null); // 消除tab上的小红点
                     }
                 });
 
                 badgePagerTitleView.setInnerPagerTitleView(commonPagerTitleView);
 
                 // 初始化小红点
-                if (i == 1 && numberOfUnreadMessages != 0) {
-                    TextView badgeTextView = (TextView) LayoutInflater.from(context).inflate(R.layout.simple_red_dot_badge_layout, null);
-                    badgeTextView.setText("" + numberOfUnreadMessages);
+                if (i == 1) {
                     badgePagerTitleView.setBadgeView(badgeTextView);
+                    resetBadge(numberOfUnreadMessages);
                 } else {
                     badgePagerTitleView.setBadgeView(null);
                 }
@@ -245,6 +262,62 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerHelper.bind(magicIndicator, pager);
     }
 
+    private void resetBadge(int unread) {
+        badgeTextView.setText(String.valueOf(unread));
+        if (unread < 1) {
+            badgeTextView.setVisibility(View.GONE);
+        }
+        else {
+            badgeTextView.setVisibility(View.VISIBLE);
+        }
+
+    }
+
+    public interface OnMessageUpdateListener {
+        void onMessageUpdate(String message);
+    }
+
+    private OnMessageUpdateListener onMessageUpdateListener;
+
+    public void SetOnMessageUpdateListener (OnMessageUpdateListener onMessageUpdateListener) {
+        this.onMessageUpdateListener = onMessageUpdateListener;
+    }
+
+    private void loadDialogusForFirstTime() {
+        numberOfUnreadMessages = 0;
+        NormalApi.getInstance().getResult(MethodCode.GetDialogues, new JSONObject(), new Subscriber<ResponseBody>() {
+            @Override
+            public void onCompleted() {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onNext(ResponseBody responseBody) {
+                try {
+                    messageJsonArgs = responseBody.string();
+                    JSONArray jsonArray = JSON.parseObject(messageJsonArgs).getJSONArray("result");
+                    for (int i = 0; i < jsonArray.size(); i++) {
+                        com.alibaba.fastjson.JSONObject jsonObject = jsonArray.getJSONObject(i);
+                        numberOfUnreadMessages += Integer.parseInt(jsonObject.getString("unread"));
+                    }
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+//                System.out.println(numberOfUnreadMessages);
+                setNovaTabView();
+                if (onMessageUpdateListener != null) {
+                    onMessageUpdateListener.onMessageUpdate(messageJsonArgs);
+                }
+            }
+        });
+    }
+
     private void loadDialogues() {
         numberOfUnreadMessages = 0;
         NormalApi.getInstance().getResult(MethodCode.GetDialogues, new JSONObject(), new Subscriber<ResponseBody>() {
@@ -263,7 +336,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     messageJsonArgs = responseBody.string();
                     JSONArray jsonArray = JSON.parseObject(messageJsonArgs).getJSONArray("result");
-                    KLog.json(jsonArray.toJSONString());
+//                    KLog.json(jsonArray.toJSONString());
                     for (int i = 0; i < jsonArray.size(); i++) {
                         com.alibaba.fastjson.JSONObject jsonObject = jsonArray.getJSONObject(i);
                         numberOfUnreadMessages += Integer.parseInt(jsonObject.getString("unread"));
@@ -271,11 +344,12 @@ public class MainActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                System.out.println(numberOfUnreadMessages);
-                refreshNovaTabView();
+//                System.out.println("未读消息" + numberOfUnreadMessages);
+                resetBadge(numberOfUnreadMessages);
 
-                SharedPreferencesHelper sharedPreferencesHelper = new SharedPreferencesHelper(getApplicationContext(), "setting");
-                sharedPreferencesHelper.put("MESSAGES", messageJsonArgs);
+                if (onMessageUpdateListener != null) {
+                    onMessageUpdateListener.onMessageUpdate(messageJsonArgs);
+                }
             }
         });
     }
@@ -299,7 +373,7 @@ public class MainActivity extends AppCompatActivity {
 
         private List<Fragment> mFragment;
 
-        public TestAdapter(FragmentManager fm, List<Fragment> mFragment) {
+        TestAdapter(FragmentManager fm, List<Fragment> mFragment) {
             super(fm);
             this.mFragment = mFragment;
         }

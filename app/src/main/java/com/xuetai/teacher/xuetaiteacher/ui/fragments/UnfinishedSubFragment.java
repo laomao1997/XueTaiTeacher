@@ -91,8 +91,10 @@ public class UnfinishedSubFragment extends Fragment {
         super.setUserVisibleHint(isVisibleToUser);
         if (isVisibleToUser) {
             //相当于Fragment的onResume
+            //刷新数据
             getCoursesFromRemote();
-        } else {
+        }
+        else {
             //相当于Fragment的onPause
         }
     }
@@ -126,6 +128,12 @@ public class UnfinishedSubFragment extends Fragment {
                         Intent intent = new Intent(getContext(), SetLessonActivity.class);
                         intent.putExtra("LESSON_DETAIL", jsonObject.toString());
                         startActivity(intent);
+                    }
+                    else {
+                        KLog.json(jsonObject.toString());
+                        Intent intent3 = new Intent(getContext(), SetLessonActivity.class);
+                        intent3.putExtra("LESSON_DETAIL", jsonObject.toString());
+                        startActivity(intent3);
                     }
                 } catch (Exception e) {
                     KLog.e(e);
@@ -171,6 +179,7 @@ public class UnfinishedSubFragment extends Fragment {
         });
     }
 
+    // 初始化列表
     private void setListView(ArrayList courseList) {
         datas.clear();
         for (int i = 0; i < courseList.size(); i++) {
@@ -211,6 +220,7 @@ public class UnfinishedSubFragment extends Fragment {
         }
     }
 
+    // 下拉刷新
     private void initSwipeRefreshLayout() {
 
         mSwipeLayout.setColorSchemeColors(Color.rgb(0, 153, 255));

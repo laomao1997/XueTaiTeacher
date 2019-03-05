@@ -99,9 +99,13 @@
         <activity
             android:name=".ui.activities.course.ViewSelectedTutorilActivity"
             android:launchMode="singleTask" />
-        <activity android:name=".ui.activities.ChatActivity" />
+        <activity
+            android:name=".ui.activities.ChatActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity android:name=".ui.activities.my.AboutActivity" />
         <activity android:name=".ui.activities.my.personalInfo.MyIntroductionActivity" />
+        <activity android:name=".ui.activities.PhotoReviewActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
